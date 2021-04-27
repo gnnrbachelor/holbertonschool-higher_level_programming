@@ -1,7 +1,5 @@
 #!/user/bin/python3
 def islower(c):
-    char = ord(c)
-    if char >= ord('a') and char <= ord('z'):
+    if ord(c) >= ord('a') and ord(c) <= ord('z'):
         return True
-    else:
-        return False
+    return False
