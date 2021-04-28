@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 def print_list_integer(mylist=[]):
-    print(*mylist, sep='\n')
+    for i in range(len(mylist)):
+        print("{}".format(mylist[i], end='\n'))
