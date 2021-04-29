@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
 
     sum = 0
     prev = 0
-    if (not isinstance(roman_string, str) or roman_string == None):
+    if (not isinstance(roman_string, str) or roman_string is None):
         return (0)
     for i in range(len(roman_string)):
         if dict.get(roman_string[i], 0) == 0:
