@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Creates Square Class """
+
+
 class Square:
     """
     Create a Square
@@ -7,11 +10,26 @@ class Square:
         """
         Initializes instance of square
         """
+        self.__size = size
+
+    @property
+    def size(self):
+        """
+        getter for size
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, size):
+        """
+        setter for size
+        """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        else:
+            self.__size = size
 
     def area(self):
         """
