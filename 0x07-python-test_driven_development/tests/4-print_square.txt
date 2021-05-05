@@ -1,0 +1,14 @@
+The ``4-print_square`` module
+=============================
+
+Using ``print_square``
+---------------------
+
+Importing function from module
+	>>> print_square = __import__("4-print_square").print_square
+
+Non-integer parameters
+	>>> print_square("t")
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
