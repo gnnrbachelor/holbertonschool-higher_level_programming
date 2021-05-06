@@ -8,7 +8,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     string = ""
-    spec_char =['.', '?', ':']
+    spec_char = ['.', '?', ':']
     for i in text:
         string += i
         if i in spec_char:

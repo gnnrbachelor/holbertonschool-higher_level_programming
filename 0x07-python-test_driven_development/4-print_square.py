@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ 4-print_square """
 
+
 def print_square(size):
     """prints square"""
     if type(size) is not int:
