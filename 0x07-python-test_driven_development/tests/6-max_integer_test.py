@@ -40,7 +40,7 @@ class TestMaxInteger(unittest.TestCase):
         """Test one element"""
         self.assertEqual(max_integer([3]), 3)
 
-    def max_at_beginning(self):
+    def test_max_at_beginning(self):
         """Max at beginning:"""
         x = [100, 5, 2, 36, 27]
         self.assertEqual(max_integer(x), 100)
