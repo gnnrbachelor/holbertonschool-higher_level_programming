@@ -12,3 +12,25 @@ Non-integer parameters
 	Traceback (most recent call last):
 	...
 	TypeError: size must be an integer
+
+Checking for positive integer
+	>>> print_square(6)
+    	######
+    	######
+    	######
+    	######
+    	######
+    	######
+
+Checking for negative integer
+	>>> print_square(-3)
+	Traceback (most recent call last):
+	...
+	ValueError: size must be >= 0
+
+Check for no arguments:
+	>>> print_square()
+	Traceback (most recent call last):
+	...
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
