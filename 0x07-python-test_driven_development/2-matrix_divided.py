@@ -4,9 +4,9 @@
 """
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix, div=1):
     """Divides all elements in matrix by div"""
-    if type(matrix) is not list:
+    if type(matrix) is not list or len(matrix) == 0:
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
     row_len = None
