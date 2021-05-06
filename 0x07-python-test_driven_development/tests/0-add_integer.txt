@@ -63,3 +63,19 @@ Checking with Float overflow
 	Traceback (most recent call last):
 	...
 	OverflowError: cannot convert float infinity to integer
+
+Checking with Float NAN
+	>>> add_integer(3, float('nan'))
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
+
+Check with no arguments
+	>>> add_integer()
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Check with one argument
+	>>> add_integer(3)
+	101
