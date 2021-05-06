@@ -48,7 +48,6 @@ Checking with dict
 	TypeError: b must be an integer
 
 Checking with list element
-
 	>>> add_integer([4], 3)
 	Traceback (most recent call last):
 	...
@@ -58,3 +57,9 @@ Checking with list element
 	Traceback (most recent call last):
 	...
 	TypeError: b must be an integer
+
+Checking with Float overflow
+	>>> add_integer(3, float('inf'))
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
