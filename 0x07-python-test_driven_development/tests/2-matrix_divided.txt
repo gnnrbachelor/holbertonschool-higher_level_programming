@@ -53,6 +53,7 @@ Check with zero division
 Check for division with infinity
 	>>> matrix = [[1, 2, 3], [4, 5, 6]]
 	>>> matrix_divided(matrix, float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
 Check for one argument
 	>>> matrix = [[1, 2, 3], [4, 5, 6]]
