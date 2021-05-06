@@ -4,7 +4,7 @@
 """
 
 
-def matrix_divided(matrix, div=1):
+def matrix_divided(matrix, div):
     """Divides all elements in matrix by div"""
     if type(matrix) is not list or len(matrix) == 0:
         raise TypeError(
