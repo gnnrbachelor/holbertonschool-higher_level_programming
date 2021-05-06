@@ -4,6 +4,7 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """Tests max_integer function"""
 
@@ -58,5 +59,3 @@ class TestMaxInteger(unittest.TestCase):
     def test_same(self):
         """Test all same values"""
         self.assertEqual(max_integer([15, 15, 15, 15, 15]), 15)
-
-
