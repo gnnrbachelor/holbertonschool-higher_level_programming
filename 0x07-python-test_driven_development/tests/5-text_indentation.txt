@@ -11,3 +11,12 @@ Non-string type:
 	Traceback (most recent call last):
 	...
 	TypeError: text must be a string
+
+Test for normal string:
+	>>> text_indentation("Hello, python don't let me down.")
+	Hello, python don't let me down.
+    	<BLANKLINE>
+
+Test for blank line:
+	>>> text_indentation("  ")
+	<BLANKLINE>
