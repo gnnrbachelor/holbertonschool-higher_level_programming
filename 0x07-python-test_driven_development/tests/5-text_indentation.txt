@@ -20,3 +20,7 @@ Test for normal string:
 Test for blank line:
 	>>> text_indentation("  ")
 	<BLANKLINE>
+
+Test for one argument:
+	>>> text_indentation("Hello")
+	Hello
