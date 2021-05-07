@@ -21,6 +21,8 @@ Test for blank line:
 	>>> text_indentation("  ")
 	<BLANKLINE>
 
-Test for one argument:
-	>>> text_indentation("Hello")
-	Hello
+Test for no argument:
+	>>> text_indentation()
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'

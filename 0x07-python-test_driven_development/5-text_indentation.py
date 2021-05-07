@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """5-text_indentation module"""
 
+
 def text_indentation(text):
     """Adds two lines after special characters """
     if type(text) is not str:
