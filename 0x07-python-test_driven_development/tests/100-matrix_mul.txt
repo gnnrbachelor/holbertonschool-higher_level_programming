@@ -63,10 +63,25 @@ Test Three arguments:
 Test Passing String:
 	>>> m_a = [[1, 2], [3, 4]]
 	>>> matrix_mul(m_a, "Chuck")
+	Traceback (most recent call last):
+	...
+	TypeError: m_b must be a list
+
+Test Passing None:
+	>>> m_b = [[1, 2], [3, 4]]
+	>>> matrix_mul(None, m_b)
+	...
+	Traceback (most recent call last):
+	...
+	TypeError: m_a must be a list
 
 Test Passing None:
 	>>> m_a = [[1, 2], [3, 4]]
 	>>> matrix_mul(m_a, None)
+	...
+	Traceback (most recent call last):
+	...
+	TypeError: m_b must be a list
 
 Test Passing String in list:
 	>>> m_a = [[1, "Chuck"], [3, 4]]
