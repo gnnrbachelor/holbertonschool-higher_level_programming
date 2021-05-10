@@ -1,0 +1,102 @@
+The ``matrix_mul module``
+=========================
+
+Using ``matrix_mul``
+-------------------
+
+Importing function
+	>>> matrix_mul = __import__("100-matrix_mul").matrix_mul
+
+Check for mod docstring:
+	>>> mod = __import__("100-matrix_mul").__doc__
+	>>> len(mod) > 1
+	True
+
+Check func doctring:
+	>>> doc = matrix_mul.__doc__
+	>>> len(doc) > 1
+	True
+
+Test Normal Case:
+	>>> m_a = [[1, 2], [3, 4]]
+	>>> m_b = [[1, 2], [3, 4]]
+	>>> matrix_mul(m_a, m_b)
+	[[7, 10], [15, 22]]
+
+Test No arguments:
+	>>> matrix_mul()
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+Test for passing empty list:
+	>>> m_b = [[1, 2], [3, 4], [5, 6]]
+	>>> matrix_mul([], m_b)
+	Traceback (most recent call last):
+	...
+	ValueError: m_a can't be empty
+
+Test for passing empty list:
+	>>> m_a = [[1, 2], [3, 4], [5, 6]]
+	>>> matrix_mul(m_a, [])
+	Traceback (most recent call last):
+	...
+	ValueError: m_b can't be empty
+
+Test for passing empty list in list:
+	>>> m_a = [[1, 2], [3, 4], [5, 6]]
+	>>> m_b = [[1, 2], []]
+	>>> matrix_mul(m_a, m_b)
+	Traceback (most recent call last):
+	...
+	ValueError: m_b can't be empty
+
+Test Three arguments:
+	>>> m_a = [[1, 2], [3, 4]]
+	>>> m_b = [[1, 2], [3, 4]]
+	>>> m_c = [[1, 2], [3, 4]]
+	>>> matrix_mul(m_a, m_b, m_c)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_mul() takes 2 positional arguments but 3 were given
+
+Test Passing String:
+	>>> m_a = [[1, 2], [3, 4]]
+	>>> matrix_mul(m_a, "Chuck")
+
+Test Passing None:
+	>>> m_a = [[1, 2], [3, 4]]
+	>>> matrix_mul(m_a, None)
+
+Test Passing String in list:
+	>>> m_a = [[1, "Chuck"], [3, 4]]
+	>>> m_b = [[1, 2], [3, 4]]
+	>>> matrix_mul(m_a, m_b)
+	Traceback (most recent call last):
+	...
+	TypeError: m_a should contain only integers or floats
+
+Test Passing String in list:
+	>>> m_a = [[1, 2], [3, 4]]
+	>>> m_b = [[1, "Chuck"], [3, 4]]
+	>>> matrix_mul(m_a, m_b)
+	Traceback (most recent call last):
+	...
+	TypeError: m_b should contain only integers or floats
+
+Test for matrix mismatched row size:
+	>>> m_a = [[1, 2], [3, 4, 5]]
+	>>> m_b = [[1, 2], [3, 4]]
+	>>> matrix_mul(m_a, m_b)
+	Traceback (most recent call last):
+	...
+	TypeError: each row of m_a must be of the same size
+
+Test for matrix mismatched row size:
+	>>> m_a = [[1, 2], [3, 4]]
+	>>> m_b = [[1, 2], [3, 4, 5]]
+	>>> matrix_mul(m_a, m_b)
+	Traceback (most recent call last):
+	...
+	TypeError: each row of m_b must be of the same size
+
