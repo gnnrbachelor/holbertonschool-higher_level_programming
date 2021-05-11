@@ -3,5 +3,5 @@
 
 
 def lookup(obj):
-    """Returns attributes and methods""""
+    """Returns attributes and methods"""
     return (dir(obj))
