@@ -1,0 +1,42 @@
+The ``7-base_geometry`` module
+==============================
+
+Using ``BaseGeometry``
+---------------------
+
+Importing function
+	>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Testing for mod docstring:
+	>>> mod = __import__("7-base_geometry").__doc__
+	>>> len(mod) > 1
+	True
+
+Testing for class docstring:
+	>>> c_doc = __import__("7-base_geometry").BaseGeometry.__doc__
+	>>> len(c_doc) > 1
+	True
+
+Testing for method docstrings:
+	>>> area_doc = __import__("7-base_geometry").BaseGeometry.area.__doc__
+	>>> len(area_doc) > 1
+	True
+	>>> validator_doc = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+	>>> len(validator_doc) > 1
+	True
+
+Create Instance:
+	>>> bg = BaseGeometry()
+
+Test Normal Case:
+	>>> bg.integer_validator("my_int", 12)
+
+Passing string for value:
+	>>> bg.integer_validator("Width", "Test")
+	Traceback (most recent call last):
+	TypeError: Width must be an integer
+
+Passing negative integer for value:
+	>>> bg.integer_validator("Width", -4)
+	Traceback (most recent call last):
+	ValueError: Width must be greater than 0
