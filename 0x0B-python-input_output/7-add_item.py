@@ -14,4 +14,3 @@ except:
 
 arg_list.extend(sys.argv[1:])
 save_to_json_file(arg_list, file_name)
-
