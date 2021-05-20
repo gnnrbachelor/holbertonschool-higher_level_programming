@@ -85,7 +85,7 @@ class Rectangle(Base):
         """__str__ method"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update rectangle"""
         arg_len = len(args)
         if arg_len != 0:
@@ -99,3 +99,15 @@ class Rectangle(Base):
                 self.x = args[3]
             if arg_len >= 5:
                 self.y = args[4]
+        elif kwargs and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
