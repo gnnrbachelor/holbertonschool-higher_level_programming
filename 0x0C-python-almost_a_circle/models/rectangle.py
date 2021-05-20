@@ -111,3 +111,13 @@ class Rectangle(Base):
                     self.x = value
                 elif key == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """Create dictionary representation of Rect"""
+        rect_dict = {}
+        rect_dict["id"] = self.id
+        rect_dict["width"] = self.width
+        rect_dict["height"] = self.height
+        rect_dict["x"] = self.x
+        rect_dict["y"] = self.y
+        return rect_dict
