@@ -78,7 +78,7 @@ class Rectangle(Base):
     def display(self):
         """Display rectangle in #"""
         if self.y != 0:
-            print('\n')
+            print('\n' * self.y, end='')
         for i in range(self.height):
             print('{}{}'.format(" " * self.x, '#' * self.width))
 
