@@ -26,6 +26,16 @@ class Test_Base_Inst(unittest.TestCase):
         base1 = Base()
         self.assertTrue(len(base1.__doc__) >= 1)
 
+    def test_id(self):
+        """Test id"""
+        base1 = Base()
+        self.assertEqual(base1.id, 1)
+
+    def test_id_change(self):
+        """Set id"""
+        base1 = Base(89)
+        self.assertEqual(base1.id, 89);
+
     def test_to_json_string(self):
         """Tests to json string"""
         rect = Rectangle(10, 2, 0, 0, 12)
