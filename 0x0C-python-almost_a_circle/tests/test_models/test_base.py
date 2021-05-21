@@ -30,3 +30,7 @@ class Test_Base_Inst(unittest.TestCase):
         """Tests to json string"""
         rect = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual(str, type(Base.to_json_string([rect.to_dictionary()])))
+
+    def test_to_json_string_none(self):
+        """Test for None"""
+        self.assertEqual("[]", Base.to_json_string(None))
