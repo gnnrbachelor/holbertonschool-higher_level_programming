@@ -29,3 +29,8 @@ class Test_Rect_Inst(unittest.TestCase):
         rect_2 = Rectangle(2, 1, 3)
         self.assertEqual(rect_1.id, rect_2.id - 1)
 
+    def test_rect_four_arguments(self):
+        """Test four arguments"""
+        rect_1 = Rectangle(1, 2, 3, 4)
+        rect_2 = Rectangle(1, 2, 3, 4)
+        self.assertEqual(rect_1.id, rect_2.id - 1)
