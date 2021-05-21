@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Module for Rectangle Class"""
-
+"""
+Module for Rectangle Class
+"""
 from models.base import Base
 
 
@@ -77,13 +78,16 @@ class Rectangle(Base):
     def display(self):
         """Display rectangle in #"""
         if self.y != 0:
-            print('\n');
+            print('\n')
         for i in range(self.height):
-            print('{}{}'.format(" "* self.x, '#'* self.width))
+            print('{}{}'.format(" " * self.x, '#' * self.width))
 
     def __str__(self):
         """__str__ method"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                                                  self.id, self.x,
+                                                  self.y, self.width,
+                                                  self.height)
 
     def update(self, *args, **kwargs):
         """Update rectangle"""
