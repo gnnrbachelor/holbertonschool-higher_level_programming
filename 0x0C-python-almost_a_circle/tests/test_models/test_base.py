@@ -20,3 +20,13 @@ class Test_Base_Inst(unittest.TestCase):
         base1 = Base()
         base2 = Base()
         self.assertEqual(base1.id, base2.id - 1)
+
+    def test_module_docstr(self):
+        """Test for module doc string"""
+        base1 = Base()
+        self.assertTrue(len(base1.__doc__) >= 1)
+
+    def test_to_json_string(self):
+        """Tests to json string"""
+        rect = Rectangle(10, 2, 0, 0, 12)
+        self.assertEqual(str, type(Base.to_json_string([rect.to_dictionary()])))
