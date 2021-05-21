@@ -15,3 +15,8 @@ class Test_Base_Inst(unittest.TestCase):
         result = pep8style_guide.check_files(["models/base.py",
                                               "models/rectangle.py"])
         self.assertEqual(result.total_errors, 0, 'PEP8 style errors: %d' % result.total_errors)
+
+    def test_no_arguments(self):
+        base1 = Base()
+        base2 = Base()
+        self.assertEqual(base1.id, base2.id - 1)
