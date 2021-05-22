@@ -6,6 +6,7 @@ import pep8
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class Test_Base_Inst(unittest.TestCase):
     """Test for Instance of Base Class"""
 
@@ -14,7 +15,9 @@ class Test_Base_Inst(unittest.TestCase):
         pep8style_guide = pep8.StyleGuide()
         result = pep8style_guide.check_files(["models/base.py",
                                               "models/rectangle.py"])
-        self.assertEqual(result.total_errors, 0, 'PEP8 style errors: %d' % result.total_errors)
+        self.assertEqual(result.total_errors,
+                         0,
+                         'PEP8 style errors: %d' % result.total_errors)
 
     def test_no_arguments(self):
         base1 = Base()
@@ -34,12 +37,13 @@ class Test_Base_Inst(unittest.TestCase):
     def test_id_change(self):
         """Set id"""
         base1 = Base(89)
-        self.assertEqual(base1.id, 89);
+        self.assertEqual(base1.id, 89)
 
     def test_to_json_string(self):
         """Tests to json string"""
         rect = Rectangle(10, 2, 0, 0, 12)
-        self.assertEqual(str, type(Base.to_json_string([rect.to_dictionary()])))
+        self.assertEqual(str,
+                         type(Base.to_json_string([rect.to_dictionary()])))
 
     def test_to_json_string_empty(self):
         json_string = Base.to_json_string([])

@@ -16,7 +16,7 @@ class Test_Square_Inst(unittest.TestCase):
         """Test for Base class as parent"""
         self.assertIsInstance(Square(1), Base)
 
-    def test_two_arguents(self):
+    def test_two_arguments(self):
         """Test for two arguments"""
         square_1 = Square(1, 2)
         square_2 = Square(1, 2)
