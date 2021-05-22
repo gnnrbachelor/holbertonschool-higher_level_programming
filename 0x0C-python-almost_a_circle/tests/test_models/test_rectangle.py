@@ -38,4 +38,9 @@ class Test_Rect_Inst(unittest.TestCase):
     def test_string_argument(self):
         """Test string arg"""
         with self.assertRaises(TypeError):
-            Rectangle('Left', 'Field')
+            Rectangle('Left', 4)
+
+    def test_string_argument_2(self):
+        """Test string arg"""
+        with self.assertRaises(TypeError):
+            Rectangle(4, 'Field')
