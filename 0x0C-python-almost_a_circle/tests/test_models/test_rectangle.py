@@ -34,3 +34,8 @@ class Test_Rect_Inst(unittest.TestCase):
         rect_1 = Rectangle(1, 2, 3, 4)
         rect_2 = Rectangle(1, 2, 3, 4)
         self.assertEqual(rect_1.id, rect_2.id - 1)
+
+    def test_string_argument(self):
+        """Test string arg"""
+        with self.assertRaises(TypeError):
+            Rectangle('Left', 'Field')
