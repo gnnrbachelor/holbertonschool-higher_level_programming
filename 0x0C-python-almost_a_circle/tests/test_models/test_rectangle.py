@@ -59,3 +59,8 @@ class Test_Rect_Inst(unittest.TestCase):
         """Test string arg"""
         with self.assertRaises(TypeError):
             Rectangle(4, 5, 6, 'Field')
+
+    def negative_parameter(self):
+        """Negative Parameter"""
+        Rectangle(-1, 2)
+        raise ValueError
