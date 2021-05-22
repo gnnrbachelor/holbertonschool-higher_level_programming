@@ -51,4 +51,13 @@ class Test_Base_Inst(unittest.TestCase):
 
     def test_to_json_string_none(self):
         """Test for None"""
-        self.assertEqual("[]", Base.to_json_string(None))
+        self.assertEqual('[]', Base.to_json_string(None))
+
+    def test_from_json_string(self):
+        """Test from json_string"""
+        test_json = '[{"height": 7, "id": 1, "x": 2, "width": 10, "y": 8},\
+                     {"height": 4, "id": 2, "x": 0, "width": 2, "y": 0}]'
+
+        test_1 = Base.from_json_string(test_json)
+        self.assertTrue(type(test_1) is list)
+        self.assertTrue(type(test_1[0]) is dict)
