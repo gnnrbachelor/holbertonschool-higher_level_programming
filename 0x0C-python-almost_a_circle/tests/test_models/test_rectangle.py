@@ -35,6 +35,11 @@ class Test_Rect_Inst(unittest.TestCase):
         rect_2 = Rectangle(1, 2, 3, 4)
         self.assertEqual(rect_1.id, rect_2.id - 1)
 
+    def test_rect_six_args(self):
+        """Tests six arguments"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, 3, 4, 5, 6)
+
     def test_string_argument(self):
         """Test string arg"""
         with self.assertRaises(TypeError):
@@ -49,3 +54,8 @@ class Test_Rect_Inst(unittest.TestCase):
         """Test string arg"""
         with self.assertRaises(TypeError):
             Rectangle(4, 5, 'Field')
+
+    def test_string_argument_4(self):
+        """Test string arg"""
+        with self.assertRaises(TypeError):
+            Rectangle(4, 5, 6, 'Field')
