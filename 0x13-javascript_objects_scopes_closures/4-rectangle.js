@@ -10,11 +10,11 @@ module.exports = class Rectangle {
 
   print () {
     for (let i = 0; i < this.height; i++) {
-    let k = 0;
-    for (let j = 0; j < this.width; j++) {
-      process.stdout.write('X');
-      k++;
-    }
+      let k = 0;
+      for (let j = 0; j < this.width; j++) {
+        process.stdout.write('X');
+        k++;
+      }
       if (k === this.width) {
         console.log();
       }
@@ -30,4 +30,3 @@ module.exports = class Rectangle {
     this.height = this.height * 2;
   }
 };
-
