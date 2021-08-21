@@ -2,7 +2,7 @@
 """Sends request to URL displays error"""
 
 if __name__ == "__main__":
-    import requests 
+    import requests
     from sys import argv
     r = requests.get(argv[1])
     if r.status_code < 400:
