@@ -14,5 +14,5 @@ if __name__ == "__main__":
     else:
         size = len(req)
     for element in range(size):
-        print("{}:{}".format(req[element].get(
-            'sha'), req[item].get('commit').get('author').get('name')))
+        print("{}: {}".format(req[element].get(
+             'sha'), req[element].get('commit').get('author').get('name')))
