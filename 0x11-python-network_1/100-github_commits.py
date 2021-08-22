@@ -11,4 +11,5 @@ if __name__ == "__main__":
     else:
         size = len(data)
     for element in range(size):
-        print("{}: {}".format(data[element].get('sha'), data[element].get('commit').get('author').get('name')))
+#        print("{}: {}".format(data[element].get('sha'), data[element].get('commit').get('author').get('name')))
+        pass
