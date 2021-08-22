@@ -4,6 +4,7 @@ from sys import argv
 import requests
 
 if __name__ == "__main__":
+    """Returns github data"""
     req = requests.get("https://api.github.com/repos/{}/{}/commmits".format(argv[2]. arv[1])).json()
 if len(req) > 10:
     size = 10
