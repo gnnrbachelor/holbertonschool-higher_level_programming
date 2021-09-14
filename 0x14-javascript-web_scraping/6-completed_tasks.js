@@ -3,24 +3,23 @@ const process = require('process');
 const request = require('request');
 
 const url = process.argv[2];
-const path = process.argv[3];
-const completed_tasks = {};
+const completedTasks = {};
 
 request(url, (err, response, body) => {
   if (err != null) {
     console.log(err);
   } else {
-	payload = JSON.parse(body);	
-	
-	payload.forEach((res) => {
-		if (res['completed'] === true) {
-			let userId = res['userId'];
-			if (!(userId in completed_tasks)) {
-				completed_tasks[userId] = 0;
-			} 
-			completed_tasks[userId] += 1;
-		}
-	});
-	console.log(completed_tasks);
+    const payload = JSON.parse(body);
+
+    payload.forEach((res) => {
+      if (res.completed === true) {
+        const userId = res.userId;
+        if (!(userId in completedTasks)) {
+          completedTasks[userId] = 0;
+        }
+        completedTasks[userId] += 1;
+      }
+    });
+    console.log(completedTasks);
   }
 });
