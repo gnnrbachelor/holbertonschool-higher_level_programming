@@ -2,12 +2,15 @@
 const process = require('process');
 const request = require('request');
 
-const url = process.argv[2];
+const id = process.argv[2];
+const url = 'https://swapi-api.hbtn.io/api/films/' + id;
+let json;
 
 request(url, (err, response, body) => {
   if (err != null) {
     console.log(err);
   } else {
-    console.log('code:', response.statusCode);
+    json = JSON.parse(body);
+    console.log(json.title);
   }
 });
